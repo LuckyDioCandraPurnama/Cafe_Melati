@@ -33,7 +33,7 @@
                 </div>
               </div>
               <div class="col-md-4 py-2">
-                <router-link to="/transaksi" class="btn btn-sm btn-primary">
+                <router-link to="/" class="btn btn-sm btn-primary">
                   <span class="text">Tampilkan</span>
                 </router-link>
                 <!-- <button type="button" class="btn btn-sm btn-primary" @click="tampil">Simpan</button> -->
@@ -47,11 +47,16 @@
               <h6 class="m-0 font-weight-bold text-primary">Tempat Duduk Teras</h6>
             </div>
             <div class="card-body">
+              <h6>Silahkan pilih tempat duduk</h6>
               <button class="btn btn-primary mr-2 my-2" type="button"> 1</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 2</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 3</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 4</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 5</button>
+              <br>
+              <router-link to="/transaksi" class="btn btn-sm btn-primary my-2">
+                  <span class="text">Simpan</span>
+                </router-link>
             </div>
           </div>
           <div class="card shadow mb-4">
@@ -59,6 +64,7 @@
               <h6 class="m-0 font-weight-bold text-primary">Tempat Duduk Indoor</h6>
             </div>
             <div class="card-body">
+              <h6>Silahkan pilih tempat duduk</h6>
               <button class="btn btn-primary mr-2 my-2" type="button"> 6</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 7</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 8</button>
@@ -70,6 +76,10 @@
               <button class="btn btn-primary mr-2 my-2" type="button">13</button>
               <button class="btn btn-primary mr-2 my-2" type="button">14</button>
               <button class="btn btn-primary mr-2 my-2" type="button">15</button> 
+              <br>
+              <router-link to="/transaksi" class="btn btn-sm btn-primary my-2">
+                  <span class="text">Simpan</span>
+                </router-link>
             </div>
           </div>
           <div class="card shadow mb-4">
@@ -77,6 +87,7 @@
               <h6 class="m-0 font-weight-bold text-primary">Tempat Duduk Halaman</h6>
             </div>
             <div class="card-body">
+              <h6>Silahkan pilih tempat duduk</h6>
               <button class="btn btn-primary mr-2 my-2" value="16" type="button">16</button>
               <button class="btn btn-primary mr-2 my-2" type="button">17</button>
               <button class="btn btn-primary mr-2 my-2" type="button">18</button>
@@ -94,6 +105,10 @@
               <button class="btn btn-primary mr-2 my-2" type="button">13</button>
               <button class="btn btn-primary mr-2 my-2" type="button">14</button>
               <button class="btn btn-primary mr-2 my-2" type="button">15</button>
+              <br>
+              <router-link to="/transaksi" class="btn btn-sm btn-primary my-2">
+                  <span class="text">Simpan</span>
+                </router-link>
             </div>
           </div>
         </div>

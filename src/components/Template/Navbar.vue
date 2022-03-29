@@ -53,21 +53,6 @@
           </form>
         </div>
       </li>
-      <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link">
-              <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ nama_outlet }}</span></a>
-      </li>
-      <div class="topbar-divider d-none d-sm-block"></div>
-      <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link">
-          <span v-if="role =='admin'" class="mr-2 d-none d-lg-inline text-gray-600 small "
-            >Admin</span>
-          <span v-if="role =='kasir'" class="mr-2 d-none d-lg-inline text-gray-600 small "
-            >Kasir</span>
-          <span v-if="role =='owner'" class="mr-2 d-none d-lg-inline text-gray-600 small "
-            >Owner</span>
-        </a>
-      </li>
       <div class="topbar-divider d-none d-sm-block"></div>
 
       <!-- Nav Item - User Information -->
@@ -89,34 +74,8 @@
             src="@/assets/kopi.jpg"
           />
         </a>
-        <!-- Dropdown - User Information -->
-        <div
-          class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-          aria-labelledby="userDropdown"
-        >
-          <a class="dropdown-item"  @click="logout">
-            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-            Logout
-          </a>
-          <!-- <div class="dropdown-divider"></div> -->
-          <!-- <router-link to="/login"> -->
-            <!-- <a class="dropdown-item"
-            >
-              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" @click="logout"></i>
-              Logout
-            </a> -->
-          <!-- </router-link> -->
-          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <button class="btn btn-info btn-icon-split " @click="logout"> 
-            
-            <span class="icon text-white-50">
-              
-                    <i class="fas fa-sign-out-alt"></i>
-                  </span>
-                  <span class="text">Logout</span></button> -->
-        </div>
+
       </li>
     </ul>
   </nav>
-  <!-- End of Topbar -->
 </template>

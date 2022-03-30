@@ -4,18 +4,18 @@ import VueRouter from 'vue-router'
 import Dashboard from '../components/Dashboard.vue'
 import Transaksi from '../components/Transaksi/Transaksi.vue'
 import Menu from '../components/Transaksi/Menu.vue'
+import Detail from '../components/Transaksi/Detail_Transaksi.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-    //DASHBOARD
     {path: '/', name: 'dashboard', component: Dashboard},
     
     {path: '/transaksi', name: 'transaksi', component: Transaksi},
     
     {path: '/transaksi/tambah', name: 'transaksi_tambah', component: Menu},
-    
-    //PAKET
+
+    {path: '/transaksi/detail', name: 'transaksi_detail', component: Detail},
 
   ]
   
@@ -24,16 +24,5 @@ const routes = [
     base: process.env.BASE_URL,
     routes
   })
-//   router.beforeEach((to, from, next) => {
-//     if (to.matched.some((record) => record.meta.requiresAuth)) {
-//       if (localStorage.getItem('auth')) {
-//         next()
-//       } else {
-//         next('/login')
-//       }
-//     }
-//     next()
-//   })
-  
   
   export default router

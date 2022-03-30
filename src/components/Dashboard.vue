@@ -48,9 +48,9 @@
             </div>
             <div class="card-body">
               <h6>Silahkan pilih tempat duduk</h6>
-              <button class="btn btn-primary mr-2 my-2" type="button"> 1</button>
-              <button class="btn btn-primary mr-2 my-2" type="button"> 2</button>
-              <button class="btn btn-primary mr-2 my-2" type="button"> 3</button>
+              <button class="btn btn-primary mr-2 my-2" type="button" value="1"> 1</button>
+              <button class="btn btn-primary mr-2 my-2" type="button" value="1"> 2</button>
+              <button class="btn btn-primary mr-2 my-2" type="button" value="1"> 3</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 4</button>
               <button class="btn btn-primary mr-2 my-2" type="button"> 5</button>
               <br>
@@ -118,3 +118,21 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      isindoor: false,
+      isTeras: false,
+      isHalaman: false,
+    };
+  },
+  created() {
+    var user = JSON.parse(this.$store.state.datauser);
+    var role = user.role;
+    if (role == "admin") this.isAdmin = true;
+    else if (role == "kasir") this.isKasir = true;
+    else this.isHalaman = true;
+  },
+};
+</script>

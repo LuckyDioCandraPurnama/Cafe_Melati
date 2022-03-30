@@ -6,8 +6,8 @@
                 <div class="col-lg-6">
                   <h2 class="h3 text-gray-900 font-weight-bold">Cafe Melati</h2>
                   <p class="mb-0 text-gray-700">
-                    Aplikasi ini buat cafe melati <br />Trus bisa cari uang
-                    <br />Aku jadi kaya raya <br />Tamat
+                    Aplikasi ini buat cafe melati <br />Pelanggan bisa memilih tempat dan 
+                    <br />Bisa pesan makanan, minuman atau snack <br />Dan melakukan pembayaran melalui aplikasi
                   </p>
                 </div>
                 <div class="col">

@@ -26,10 +26,10 @@
                               mb-1
                             "
                           >
-                            Nasi Goreng
+                            
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            
                           </div>
                         </div>
                         <div class="col-auto">
@@ -58,10 +58,10 @@
                               mb-1
                             "
                           >
-                            Mie Goreng
+                            {{unggulan.sort_makan}}
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            {{unggulan.sort_makan}}
                           </div>
                         </div>
                         <div class="col-auto">
@@ -90,10 +90,10 @@
                               mb-1
                             "
                           >
-                            Chocolatos
+                            
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            
                           </div>
                         </div>
                         <div class="col-auto">
@@ -123,10 +123,10 @@
                               mb-1
                             "
                           >
-                            Soda Gembira
+                            
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            
                           </div>
                         </div>
                         <div class="col-auto">
@@ -155,10 +155,10 @@
                               mb-1
                             "
                           >
-                            Taro Net
+                            
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            
                           </div>
                         </div>
                         <div class="col-auto">
@@ -187,10 +187,10 @@
                               mb-1
                             "
                           >
-                            Chitato
+                            
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            Rp 10000
+                            
                           </div>
                         </div>
                         <div class="col-auto">
@@ -215,7 +215,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-md-4 table-responsive">
+                <!-- <div class="col-md-4 table-responsive">
                 <label class="font-weight-bold">Makanan</label>
                 <table
                   class="table table-bordered"
@@ -233,6 +233,26 @@
                   <tbody>
                     <tr>
                       <td>1</td>
+                      <td>Nasi Goreng</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Nasi Goreng</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Nasi Goreng</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Nasi Goreng</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
                       <td>Nasi Goreng</td>
                       <td>Rp10000</td>
                     </tr>
@@ -260,6 +280,26 @@
                       <td>Chocolatos</td>
                       <td>Rp8000</td>
                     </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Chocolatos</td>
+                      <td>Rp8000</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Chocolatos</td>
+                      <td>Rp8000</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Chocolatos</td>
+                      <td>Rp8000</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Chocolatos</td>
+                      <td>Rp8000</td>
+                    </tr>
                   </tbody>
                 </table>
                 </div>
@@ -284,30 +324,185 @@
                       <td>Chitato</td>
                       <td>Rp10000</td>
                     </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Chitato</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Chitato</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Chitato</td>
+                      <td>Rp10000</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Chitato</td>
+                      <td>Rp10000</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div> -->
+                <div class="col-md-4 table-responsive">
+                <label class="font-weight-bold">Makanan</label>
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th>NAMA</th>
+                      <th>HARGA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(s,index) in makanan" :key="index">
+                      <td>{{index +1}}</td>
+                      <td>{{s.name}}</td>
+                      <td>{{s.price}}</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                </div>
+                <div class="col-md-4 table-responsive">
+                <label class="font-weight-bold">Minuman</label>
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th>NAMA</th>
+                      <th>HARGA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(s,index) in minuman" :key="index">
+                      <td>{{index +1}}</td>
+                      <td>{{s.name}}</td>
+                      <td>{{s.price}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+                <div class="col-md-4 table-responsive">
+                <label class="font-weight-bold">Snack</label>
+                <table
+                  class="table table-bordered"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th>NAMA</th>
+                      <th>HARGA</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(s,index) in snack" :key="index">
+                      <td>{{index +1}}</td>
+                      <td>{{s.name}}</td>
+                      <td>{{s.price}}</td>
+                    </tr>
                   </tbody>
                 </table>
                 </div>
               </div>
-              <div class="row align-items-center">
-                <!-- <div class="col-md-4 text-center">
-                  <img
-                    src="@/assets/kopi.jpg"
-                    width="200px"
-                    height="200px">
-                </div> -->
+            </div>
+          </div>
+          <!-- Keranjang -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Keranjang</h6>
+            </div>
+            <form @submit.prevent="tambah">
+            <div class="card-body">
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label>Makanan</label>
+                  <select class="form-control" v-model="detail.id_menu">
+                     <option :value="null">-</option>
+                     <option v-for="(m,index) in makanan" :key="index" :value="m.id_menu">{{m.name}}</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Jumlah</label>
+                <input type="text" class="form-control" v-model="detail.quantity" >
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label>Minuman</label>
+                  <select class="form-control">
+                     <option :value="null">-</option>
+                     <option v-for="(m,index) in minuman" :key="index" :value="m.id_menu">{{m.name}}</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Jumlah</label>
+                <input type="text" class="form-control" v-model="detail.quantity">
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <label>Snack</label>
+                  <select class="form-control">
+                     <option :value="null">-</option>
+                     <option v-for="(m,index) in snack" :key="index" :value="m.id_menu">{{m.name}}</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="">Jumlah</label>
+                <input type="text" class="form-control" v-model="detail.quantity">
+                </div>
+              </div>
+                <div class="">
+                  <button type="submit" class="btn btn-sm btn-primary" @click="tambah">Simpan</button>
+                </div>
+                <br>
+              <div class="row">
+                <table class="table" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Nama</th>
+                      <th>Harga</th>
+                      <th>Jumlah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(m,index) in detail" :key="index">
+                      <td>{{m.name}}</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
                 <div class="col-md-4 text-center"></div>
 
                 <div class="col-md-4"></div>
-
-                <router-link to="/" class="btn btn-secondary"
-                  >Kembali</router-link
-                >
-                &nbsp;
-                <button type="submit" class="btn btn-primary">
-                  Tambah Pesanan
-                </button>
+                <!-- <button type="submit" class="btn btn-success">
+                  Bayar
+                </button> -->
+                
               </div>
+              
+              
             </div>
+            </form>
           </div>
           <!-- METODE PEMBAYARAN -->
           <div class="card shadow mb-4">
@@ -324,71 +519,26 @@
                         <option >BNI</option>
                         <option >Mandiri</option>
                         <option >GoPay</option>
-                        <option >OVO</option>
-                        <!-- <option value="member.id" >{{member.nama}}</option> -->
+                        <option >OVO</option>  
                     </select>
                     <br />
                   </div>
                 </div>
-              <h5 class="font-weight-bold text-primary">Tunai</h5>
-                  <h6>Silahkan Datang Ke Kasir</h6>
+                  <h5 class="font-weight-bold text-primary">Tunai</h5>
+                <div class="row">
+                  <div class="col-md-4">
+                    <h6>Silahkan Datang Ke Kasir</h6>
+                  </div>
                 <!-- <div class="">
                 </div> -->
-              </div>
-          </div>
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Bukti Transaksi</h6>
-            </div>
-            <div class="card-body">
-                <div class="text-center">
-                  <!-- <hr /> -->
-                  <h1 class="h1 font-weight-bold mb-0 text-gray-900">
-                    Cafe Melati
-                  </h1>
-                  <h3 class="h3 mb-0 text-gray-800">Jl. Dr. Wahidin No 86, Surabaya</h3>
-                  <h5 class="h5 mb-0 text-gray-800">Telp 085233444111</h5>
-                  <br>
                 </div>
-              <div class="row">
-                <table class="table" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Nama</th>
-                      <th>Harga</th>
-                      <th>Jumlah</th>
-                      <th>Subtotal</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Nasi Goreng</td>
-                      <td>10000</td>
-                      <td>2</td>
-                      <td>20000</td>
-                    </tr>
-                    <tr>
-                      <td>Es Teh</td>
-                      <td>5000</td>
-                      <td>2</td>
-                      <td>10000</td>
-                    </tr>
-                      <tr>
-                      <td colspan="3" class="text-right">Total</td>
-                      <td>Rp30000</td>
-                      </tr>
-                  </tbody>
-                </table>
-                <div class="col-md-4 text-center"></div>
-
-                <div class="col-md-4"></div>
-                <button type="submit" class="btn btn-success">
-                  Bayar
-                </button>
               </div>
-            </div>
+              <div class="card-footer">
+                  <router-link to="/transaksi/detail" class="btn btn-success">
+                    Bayar
+                  </router-link>
+              </div>
           </div>
-          
         </div>
       </div>
       <!-- </div> -->
@@ -396,3 +546,54 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      data:{},
+      menu: {},
+      total: "",
+
+      makanan: {},
+      minuman: {},
+      snack: {},
+
+      unggulan: {},
+      sortminuman: {},
+      sortsnack: {},
+      detail: {},
+    };
+  },
+  created() {
+    this.axios.get("http://localhost/cafe_melati/public/api/makanan").then((res) => {
+      this.makanan = res.data;
+    })
+    this.axios.get("http://localhost/cafe_melati/public/api/minuman").then((res) => {
+      this.minuman = res.data;
+    })
+    this.axios.get("http://localhost/cafe_melati/public/api/snack").then((res) => {
+      this.snack = res.data;
+    })
+    //MENU dan UNGGULAN
+    this.axios.get("http://localhost/cafe_melati/public/api/menu").then((res) => {
+      this.unggulan = res.data;
+    })
+
+  },
+  methods: {
+    tambah() {
+      this.axios
+        .post(
+          "http://localhost/cafe_melati/public/api/detail_transaction",
+          this.detail,  
+        )
+        .then(() => {
+          this.$router.go({
+            name: "transaksi_detail",       
+          });
+        })
+        .catch((err) => console.log(err));
+    },
+  },
+};
+</script>

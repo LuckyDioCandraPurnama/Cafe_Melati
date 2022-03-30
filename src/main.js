@@ -8,10 +8,7 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 Vue.component('navbar-component', require('./components/Template/Navbar.vue').default);
-// Vue.component('sidebar-component', require('./components/Template/Sidebar.vue').default);
 Vue.component('footer-component', require('./components/Template/Footer.vue').default);
-
-
 new Vue({
   router,
   render: h => h(App),

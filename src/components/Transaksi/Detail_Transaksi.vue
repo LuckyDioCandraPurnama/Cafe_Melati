@@ -88,7 +88,7 @@
                   <h5 class="h5 mb-0 text-gray-800">Telp 085233444111</h5>
                   <br>
                 </div>
-              <div class="row">
+              <div class="row table-responsive">
                 <table class="table" cellspacing="0">
                   <thead>
                     <tr>
@@ -99,17 +99,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Nasi Goreng</td>
-                      <td>10000</td>
-                      <td>2</td>
-                      <td>20000</td>
-                    </tr>
-                    <tr>
-                      <td>Es Teh</td>
-                      <td>5000</td>
-                      <td>2</td>
-                      <td>10000</td>
+                    <tr v-for="(m,index) in struk" :key="index">
+                      <td>{{m.name}}</td>
+                      <td>{{m.price}}</td>
+                      <td>{{m.quantity}}</td>
+                      <td>{{m.subtotal}}</td>
                     </tr>
                       <tr>
                       <td colspan="3" class="text-right">Total</td>
@@ -123,10 +117,10 @@
                 <!-- <button type="submit" class="btn btn-primary">
                   Lakukan Pemesanan Lain
                 </button> -->
+              </div>
                 <router-link to="/transaksi" class="btn btn-primary">
                 Lakukan Pemesanan Lain
                 </router-link>
-              </div>
             </div>
           </div>
           
@@ -137,3 +131,20 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+          struk:{},
+        }
+    },
+    created() {
+      this.axios.get("http://localhost/cafe_melati/public/api/keranjang").then((res) => {
+      this.struk = res.data;
+    })
+    },
+    methods : {
+             
+    },
+}
+</script>

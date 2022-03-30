@@ -25,10 +25,11 @@
                               text-success text-uppercase
                               mb-1
                             "
-                          >
+                          >{{unggulanmakan.name}}
                             
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
+                          Rp{{unggulanmakan.price}}
                             
                           </div>
                         </div>
@@ -44,7 +45,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="col-lg-4 xl-3 md-6 mb-4">
                   <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
@@ -58,16 +58,16 @@
                               mb-1
                             "
                           >
-                            {{unggulan.sort_makan}}
+                            {{unggulanminum.name}}
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            {{unggulan.sort_makan}}
+                            Rp{{unggulanminum.price}}
                           </div>
                         </div>
                         <div class="col-auto">
                           <img
                             class="img-profile rounded-circle"
-                            src="@/assets/mie.jpg"
+                            src="@/assets/jeruk.jpg"
                             width="80px"
                             height="80px"
                           />
@@ -76,7 +76,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="col-lg-4 xl-3 md-6 mb-4">
                   <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
@@ -89,108 +88,11 @@
                               text-success text-uppercase
                               mb-1
                             "
-                          >
+                          >{{unggulansnack.name}}
                             
                           </div>
                           <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <img
-                            class="img-profile rounded-circle"
-                            src="@/assets/coklat.jpg"
-                            width="80px"
-                            height="80px"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4 xl-3 md-6 mb-4">
-                  <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="
-                              text-xs
-                              font-weight-bold
-                              text-info text-uppercase
-                              mb-1
-                            "
-                          >
-                            
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <img
-                            class="img-profile rounded-circle"
-                            src="@/assets/sogem.jpg"
-                            width="80px"
-                            height="80px"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 xl-3 md-6 mb-4">
-                  <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="
-                              text-xs
-                              font-weight-bold
-                              text-info text-uppercase
-                              mb-1
-                            "
-                          >
-                            
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <img
-                            class="img-profile rounded-circle"
-                            src="@/assets/taro.jpg"
-                            width="80px"
-                            height="80px"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 xl-3 md-6 mb-4">
-                  <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="
-                              text-xs
-                              font-weight-bold
-                              text-info text-uppercase
-                              mb-1
-                            "
-                          >
-                            
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            
+                            Rp{{unggulansnack.price}}
                           </div>
                         </div>
                         <div class="col-auto">
@@ -428,7 +330,7 @@
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Keranjang</h6>
             </div>
-            <form @submit.prevent="tambah">
+            <!-- <form @submit.prevent="tambah"> -->
             <div class="card-body">
               <div class="row">
                 <div class="form-group col-md-4">
@@ -483,11 +385,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr v-for="(m,index) in detail" :key="index">
+                    <tr v-for="(m,index) in keranjang" :key="index">
                       <td>{{m.name}}</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <td>{{m.price}}</td>
+                      <td>{{m.quantity}}</td>
+                      <!-- <td></td> -->
                     </tr>
                   </tbody>
                 </table>
@@ -498,13 +400,12 @@
                   Bayar
                 </button> -->
                 
-              </div>
-              
-              
+              </div>      
             </div>
-            </form>
+            <!-- </form> -->
           </div>
           <!-- METODE PEMBAYARAN -->
+          <form @submit.prevent="bayar">
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Metode Pembayaran</h6>
@@ -521,7 +422,7 @@
                         <option >GoPay</option>
                         <option >OVO</option>  
                     </select>
-                    <br />
+                    <!-- <br /> -->
                   </div>
                 </div>
                   <h5 class="font-weight-bold text-primary">Tunai</h5>
@@ -534,11 +435,15 @@
                 </div>
               </div>
               <div class="card-footer">
-                  <router-link to="/transaksi/detail" class="btn btn-success">
+                <button class="btn btn-success" type="submit">
+                  Bayar
+                </button>
+                  <!-- <router-link to="/transaksi/detail" class="btn btn-success">
                     Bayar
-                  </router-link>
+                  </router-link> -->
               </div>
           </div>
+          </form>
         </div>
       </div>
       <!-- </div> -->
@@ -554,13 +459,16 @@ export default {
       menu: {},
       total: "",
 
+      keranjang: "",
+
       makanan: {},
       minuman: {},
       snack: {},
 
-      unggulan: {},
-      sortminuman: {},
-      sortsnack: {},
+      unggulanmakan: {},
+      unggulanminum: {},
+      unggulansnack: {},
+
       detail: {},
     };
   },
@@ -575,20 +483,37 @@ export default {
       this.snack = res.data;
     })
     //MENU dan UNGGULAN
-    this.axios.get("http://localhost/cafe_melati/public/api/menu").then((res) => {
-      this.unggulan = res.data;
+    this.axios.get("http://localhost/cafe_melati/public/api/unggulan/makan").then((res) => {
+      this.unggulanmakan = res.data;
+    })
+    this.axios.get("http://localhost/cafe_melati/public/api/unggulan/minum").then((res) => {
+      this.unggulanminum = res.data;
+    })
+    this.axios.get("http://localhost/cafe_melati/public/api/unggulan/snack").then((res) => {
+      this.unggulansnack = res.data;
     })
 
   },
   methods: {
     tambah() {
       this.axios
+        .get(
+          "http://localhost/cafe_melati/public/api/keranjang",
+          this.keranjang,  
+        )
+        .then(res => {
+          this.keranjang = res.data
+        })
+         .catch(err => console.log(err))
+    },
+    bayar() {
+      this.axios
         .post(
           "http://localhost/cafe_melati/public/api/detail_transaction",
           this.detail,  
         )
         .then(() => {
-          this.$router.go({
+          this.$router.push({
             name: "transaksi_detail",       
           });
         })
